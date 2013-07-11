@@ -5,9 +5,12 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 var lee = fs.readFileSync('index.html');
-console.log(lee);
+//console.log(lee);
+
 var buffer = new Buffer(256);
-len = buffer.write('\u00bd', 0);
+
+len = buffer.write(lee, 0);
+
 //fs.readFileSync('index.html'), 0);
 //console.log(len + " bytes: " + buffer.toString('utf8', 0, len));;
 
