@@ -7,7 +7,7 @@ var app = express.createServer(express.logger());
 var buffer = new Buffer(256);
 len = buffer.write('\u00bd + \u00bc = \u00be', 0);
 //fs.readFileSync('index.html'), 0);
-console.log(len + " bytes: " + buffer.toString('utf8', 0, len));;
+//console.log(len + " bytes: " + buffer.toString('utf8', 0, len));;
 
 app.get('/', function(request, response) {
  //fs.readFileSync('index.html');
