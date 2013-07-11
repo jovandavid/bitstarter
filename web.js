@@ -20,7 +20,8 @@ app.get('/', function(request, response) {
  fs.readFileSync('index.html', function (err, data) {
      if (err) throw err;
      console.log(data);
- }););
+ }));
+
   //response.send(buffer.toString('utf-8', 0, len));
  //console.log("esto jala? "+lee);
 });
