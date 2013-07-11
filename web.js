@@ -14,6 +14,7 @@ len = buffer.write('\u00bd', 0);
 app.get('/', function(request, response) {
  //fs.readFileSync('index.html');
  response.send(buffer.toString('utf-8', 0, len));
+ console.log("esto jala? "+lee);
 });
 
 var port = process.env.PORT || 5000;
