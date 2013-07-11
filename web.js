@@ -16,11 +16,7 @@ len = buffer.write('\u00bd', 0);
 
 app.get('/', function(request, response) {
  //fs.readFileSync('index.html');
- response.send(
- fs.readFileSync('index.html', function (err, data) {
-     if (err) throw err;
-     console.log(data);
- }));
+ response.send(fs.readFileSync('index.html', 'utf8'));
 
   //response.send(buffer.toString('utf-8', 0, len));
  //console.log("esto jala? "+lee);
