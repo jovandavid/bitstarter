@@ -9,15 +9,16 @@ var lee = fs.readFileSync('index.html');
 
 var buffer = new Buffer(256);
 
-len = buffer.write(lee, 0);
+len = buffer.write('\u00bd', 0);
 
 //fs.readFileSync('index.html'), 0);
 //console.log(len + " bytes: " + buffer.toString('utf8', 0, len));;
 
 app.get('/', function(request, response) {
  //fs.readFileSync('index.html');
- response.send(buffer.toString('utf-8', 0, len));
- console.log("esto jala? "+lee);
+ response.send(lee);
+ //response.send(buffer.toString('utf-8', 0, len));
+ //console.log("esto jala? "+lee);
 });
 
 var port = process.env.PORT || 5000;
